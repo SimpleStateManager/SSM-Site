@@ -1,0 +1,18 @@
+;(function ( $, window, document, undefined ) {
+    var pluginName = "defaultPluginName",
+        expectedType = "number";
+
+    if (typeof window.ssm === "object") {
+        ssm.addConfigOption({
+            name: pluginName,
+            test: function(){
+                if(typeof this.state[pluginName] === expectedType && this.state[pluginName] >= this.browserWidth){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+        });
+    }
+})( jQuery, window, document );
