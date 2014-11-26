@@ -83,11 +83,13 @@
                     <li>Use Bower to add to your project using <code>bower install SimpleStateManager</code></li>
                 </ul>
 
-                <p>Having downloaded SimpleStateManager you will next need to include the JavaScript file inside the  </p>
+                <p>Having downloaded SimpleStateManager you will next need to include the JavaScript file in your page. It is recommended that this is at the end of the body before your main JavaScript file.</p>
 
                 <pre><code>&lt;script src="bower_components/SimpleStateManager/dist/ssm.min.js"&gt;&lt;/script&gt;</code></pre>
 
-                <p>The next step is to add our first state using SimpleStateManager, to do this we use the <code>ssm.addState</code> method. For this example we will add a state named "mobile" which has a maximum width of 767px.</p>
+                <p>The next step is to add our first state using SimpleStateManager, to do this we use the <code>ssm.addState</code> method. This method takes a single argument which is a object containing the state configuration options.</p>
+
+                <p>For this example we will add a state named "mobile" which has a maximum width of 767px.</p>
 
                 <pre><code>ssm.addState({
     id: 'mobile',
@@ -96,6 +98,10 @@
         console.log('enter mobile');
     }
 });</code></pre>
+
+                <p>Once we have finished adding our states to SimpleStateManager we can run the tests using the <code>ssm.ready()</code> method.</code></p>
+
+                <pre><code>ssm.ready();</code></pre>
             </div>
         </section>
 
@@ -117,14 +123,11 @@
         <section id="contribute">
             <div class="container">
                 <h2>Contribute</h2>
-                <p>Anybody is welcome to contribute to this project, this is a community led library and you can get involved in the following ways</p>
 
-                <ul>
-                    <li>Create Issues for bugs or new feature requests</li>
-                    <li>Fix any issues you have found and create a pull request</li>
-                </ul>
+                <p>SimpleStateManager is an open source project maintained by a small group of contributors, as such we are always looking for new people who want to get involved.</p>
 
-                <p>Typically master is the latest version of SSM, new features are pushed into branches and when a branch has been fully tested and all the features are complete it will be merged into master. The milestone assigned in GitHub should be used for the branch name.</p>
+                <p>In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using Grunt</p>
+
                 <h3>Contributors</h3>
                 <ul>
                     <li><a href="http://www.jonathanfielding.com">Jonathan Fielding</a></li>
