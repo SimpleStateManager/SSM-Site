@@ -18,9 +18,10 @@ Documentation can be found at http://www.simplestatemanager.com
 
 ##Release Log
 
-###2.4.0 - x
+###2.4.0 - December 29, 2014
 * Improved release process with version auto updating
 * Implemented proper AMD support
+* Made the site a seperate repository
 
 ###2.3.0 - July 25, 2014
 * Added onFirstRun callback method to states.

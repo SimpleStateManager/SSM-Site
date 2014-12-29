@@ -61,11 +61,21 @@
 
                 <p>One of the features of SimpleStateManager is the ability to add custom configuration options which perform a particular test. The benefit being that rather than simply testing for the width of the browser, we can add our own tests which allow us to test for support for a particular feauture, in fact, anything you can test in JavaScript you can test with SimpleStateManager. A common example something you might want to test could be whether the device supports touch events.</p>
 
-
                 <h2>Custom config options</h2>
 
-                <p>The first way we can extend SimpleStateManager is simply adding a custom config option</p>
-                <p>A number of developers have written small snippets</p>
+                <p>The first way we can extend SimpleStateManager is simply adding a custom config option. A custom config option allows us to define a test and then use this as an option when configuring our states.</p>
+
+                <p>A simple example of where we might want to use a custom configuration option is to only target our state towards touch devices. To do this we need to write a test that allows us to test for touch devices. In this example to determine whether the device is a touch device or not we will use Modernizr.</p>
+                <pre><code>ssm.addConfigOption({name:"touch", test: function(){
+	if(typeof this.state.touch === "boolean" && this.state.touch === Modernizr.touch){
+		return true;
+	}
+	else{
+		return false;
+	}
+}});</code></pre>
+
+                <!--<p>A number of developers have written small snippets</p>-->
 
                 <h2>Plugins</h2>
 
