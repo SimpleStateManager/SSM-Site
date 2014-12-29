@@ -89,7 +89,7 @@
 
                 <p>The next step is to add our first state using SimpleStateManager, to do this we use the <code>ssm.addState</code> method. This method takes a single argument which is a object containing the state configuration options.</p>
 
-                <p>For this example we will add a state named "mobile" which has a maximum width of 767px.</p>
+                <p>For this example we will add a state named "mobile" which has a maximum width of 767px. To do this we will set the value of <code>maxWidth</code> to 767 and we will define an onEnter method which will log to the console "enter mobile" when the state is entered.</p>
 
                 <pre><code>ssm.addState({
     id: 'mobile',
@@ -110,10 +110,10 @@
                 <h2>FAQs</h2>
 
                 <h3 class="h4">Why would I use SimpleStateManager rather than Media Queries?</h3>
-                <p>Media Queries allow you to change the way a site looks based upon a number of conditions, in contrast, SimpleStateManager allows you to change the functionality of your site. In this way, both Media Queries and SimpleStateManager compliment one another, as in the situationw where you are changing functionality you might also be changing functionality.</p>
+                <p>Media Queries allow you to change the way a site looks based upon a number of conditions, in contrast, SimpleStateManager allows you to change the functionality of your site. In this way, both Media Queries and SimpleStateManager compliment one another, as in the situation where you are changing the look of your site you might also be changing functionality.</p>
 
                 <h3 class="h4">What does SimpleStateManager offer me over simply using the MatchMedia API?</h3>
-                <p>The MatchMedia API is incredibly powerful as it allows us to use</p>
+                <p>The MatchMedia API is incredibly powerful as it allows us to use media queries in our JavaScript, when the media query is matched or unmatched a callback method is run. SimpleStateManager states offers similar functionality by attaching itself to the browsers <code>onresize</code> method and allowing you to define different browser states. The benefit of this approach is that along with the matching and unmatching callbacks of a state you can also add an on resize method to the state.</p>
 
                 <h3 class="h4">What browsers does SimpleStateManager support?</h3>
                 <p>Currently SimpleStateManager supports Chrome, Firefox, Internet Explorer 7+, Safari, Opera</p>
@@ -126,7 +126,7 @@
 
                 <p>SimpleStateManager is an open source project maintained by a small group of contributors, as such we are always looking for new people who want to get involved.</p>
 
-                <p>In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using Grunt</p>
+                <p>In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using Grunt.</p>
 
                 <h3>Contributors</h3>
                 <ul>
