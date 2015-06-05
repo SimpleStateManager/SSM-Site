@@ -1,4 +1,4 @@
-# Simple State Manager 2.4.0
+# Simple State Manager 3.0.0
 
 [![Build Status](https://travis-ci.org/SimpleStateManager/SimpleStateManager.png?branch=master)](https://travis-ci.org/SimpleStateManager/SimpleStateManager) [![Code Climate](https://codeclimate.com/github/SimpleStateManager/SimpleStateManager.png)](https://codeclimate.com/github/SimpleStateManager/SimpleStateManager)
 
@@ -17,6 +17,15 @@ To get started with SSM the first step is to include it in your project, you can
 Documentation can be found at http://www.simplestatemanager.com
 
 ##Release Log
+
+###3.0.0 - June 8th, 2015
+* Rewrite to use the matchMedia API
+* Add support for media queries
+* Major refactor
+* Remove legacy browser (IE 8 and below) support
+
+###2.4.1 - May 17, 2015
+* Fix browser width when browser is zoomed
 
 ###2.4.0 - December 29, 2014
 * Improved release process with version auto updating

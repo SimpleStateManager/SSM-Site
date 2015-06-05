@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SimpleStateManager - Responsive state manager for JS</title>
+        <title>SimpleStateManager {{package.version}} - Responsive state manager for JavaScript</title>
         <link rel="stylesheet" href="css/styles.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -62,7 +62,7 @@
 
         <section id="intro">
             <div class="container">
-                <p>SimpleStateManager is built around the concept of states, a state being the conditions of the browser at any given point, example conditions being the dimensions of the viewport and the features it supports. With SimpleStateManager you can define a state and a series of conditions that must be met for it to be active. Each of these states can then have an onEnter, onLeave and onResize event.</p>
+                <p>SimpleStateManager is built around the concept of states, a state being the conditions of the browser at any given point, a condition might be whether a media query matches and/or the features the browser supports. With SimpleStateManager you can define a state and a series of conditions that must be met for it to be active. Each of these states can then have an onEnter, onLeave and onResize event.</p>
 
                 <h2>Why should I use SSM</h2>
 
@@ -77,10 +77,11 @@
         <section id="getstarted">
             <div class="container">
                 <h2>Getting started</h2>
-                <p>To get started with SimpleStageManager the first step is to include it in your project, you can do this in two ways</p>
+                <p>To get started with SimpleStageManager the first step is to include it in your project, you can do this in three ways</p>
                 <ul>
                     <li>Download and add the ssm.js (or the minified ssm.min.js) file to your site</li>
                     <li>Use Bower to add to your project using <code>bower install SimpleStateManager</code></li>
+                    <li>Use NPM to add to your project using <code>npm install SimpleStateManager --save</code></li>
                 </ul>
 
                 <p>Having downloaded SimpleStateManager you will next need to include the JavaScript file in your page. It is recommended that this is at the end of the body before your main JavaScript file.</p>
@@ -93,15 +94,14 @@
 
                 <pre><code>ssm.addState({
     id: 'mobile',
-    maxWidth: 767,
+    query: '(min-width: 767px)',
     onEnter: function(){
         console.log('enter mobile');
     }
 });</code></pre>
 
-                <p>Once we have finished adding our states to SimpleStateManager we can run the tests using the <code>ssm.ready()</code> method.</code></p>
+                <p>As soon as you have added the state, SimpleStageManager will check whether the conditions you specified have been matched, that being the case it will run the onEnter and onFirstRun methods if they have been specified.</p>
 
-                <pre><code>ssm.ready();</code></pre>
             </div>
         </section>
 

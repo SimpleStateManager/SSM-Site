@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SimpleStateManager - Responsive state manager for JS</title>
+        <title>SimpleStateManager - Responsive state manager for JavaScript</title>
         <link rel="stylesheet" href="css/styles.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -64,7 +64,7 @@
 
                 <pre>ssm.addState({
     id: 'mobile',
-    maxWidth: 767,
+    query: '(max-width: 767px)',
     onEnter: function(){
         console.log('enter mobile');
     }
@@ -72,8 +72,8 @@
 
 ssm.addState({
     id: 'tablet',
-    minWidth: 768,
-    maxWidth: 1023,
+    query: '(min-width: 768px)',
+    query: '(max-width: 1023px)',
     onEnter: function(){
         console.log('enter tablet');
     }
@@ -81,7 +81,7 @@ ssm.addState({
 
 ssm.addState({
     id: 'desktop',
-    minWidth: 1024,
+    query: '(min-width: 1024px)',
     onEnter: function(){
         console.log('enter desktop');
     }
@@ -92,22 +92,22 @@ ssm.addState({
 <pre>ssm.addStates([
 {
     id: 'mobile',
-    maxWidth: 767,
+    query: '(max-width: 767px)',
     onEnter: function(){
         console.log('enter mobile');
     }
 },
 {
     id: 'tablet',
-    minWidth: 768,
-    maxWidth: 1023,
+    query: '(min-width: 768px)',
+    query: '(max-width: 1023px)',
     onEnter: function(){
         console.log('enter tablet');
     }
 },
 {
     id: 'desktop',
-    minWidth: 1024,
+    uery: '(min-width: 1024px)',
     onEnter: function(){
         console.log('enter desktop');
     }
@@ -123,24 +123,7 @@ ssm.addState({
                 <p>Or if you want to remove multiple at the same time</p>
 
                 <pre>ssm.removeStates(['tablet', 'mobile']);</pre>
-
-                <h3>Ready</h3>
-
-                <p>Once you have finished setting up your states you should run <code>ssm.ready()</code> which will setup the states.</p>
-
-                <pre>ssm.ready();</pre>
-
-                <p>As SSM is chaninable you can fire the <code>ssm.ready()</code> method by simply adding <code>.ready()</code> onto your original command</p>
-
-                <pre>ssm.addState({
-    id: 'mobile',
-    maxWidth: 767,
-    onEnter: function(){
-        document.getElementById('hero').style.backgroundColor = "#daa23e";
-    }
-}).ready();</pre>
-
-
+                
                 <h3>Add a new config option</h3>
                 <p>In SimpleStateManager options we pass to our states are called config options, we are able to add new config options to SimpleStateManager using <code>ssm.addConfigOption</code></p>
 
