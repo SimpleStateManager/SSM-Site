@@ -7,7 +7,7 @@
         id: 'mobile',
         maxWidth: 767,
         onEnter: function(){
-            document.getElementById('hero').style.backgroundColor = "#003350";
+            document.getElementById('hero').style.backgroundColor = "#3f0071";
         }
     });
 
@@ -16,7 +16,7 @@
         minWidth: 768,
         maxWidth: 991,
         onEnter: function() {
-            document.getElementById('hero').style.backgroundColor = "#00446a";
+            document.getElementById('hero').style.backgroundColor = "#652995";
         }
     });
 
@@ -24,7 +24,7 @@
         id: 'desktop',
         minWidth: 992,
         onEnter: function(){
-            document.getElementById('hero').style.backgroundColor = "#07669c";
+            document.getElementById('hero').style.backgroundColor = "#663399";
         }
     });
 
