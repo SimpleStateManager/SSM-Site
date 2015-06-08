@@ -49,6 +49,12 @@
             </div>
         </div>
 
+        <div class="old-version">
+            <div class="container">
+                <p class="text-align-center"><a href="/2.4.0">Are you looking for the SimpleStateManager 2.4.0 documentation? Visit the SimpleStageManager 2.4.0 Site. &raquo;</a></p>
+            </div>
+        </div>
+
         <header id="hero">
             <div class="container">
                 <img src="images/ssm-logo.png" class="logo">
@@ -116,7 +122,26 @@
                 <p>The MatchMedia API is incredibly powerful as it allows us to use media queries in our JavaScript, when the media query is matched or unmatched a callback method is run. SimpleStateManager states offers similar functionality by attaching itself to the browsers <code>onresize</code> method and allowing you to define different browser states. The benefit of this approach is that along with the matching and unmatching callbacks of a state you can also add an on resize method to the state.</p>
 
                 <h3 class="h4">What browsers does SimpleStateManager support?</h3>
-                <p>Currently SimpleStateManager supports Chrome, Firefox, Internet Explorer 7+, Safari, Opera</p>
+            
+                <p>Version 3.x of SimpleStateManager and above supports the following browsers:</p>
+
+                <ul>
+                    <li>Internet Explorer 9+</li>
+                    <li>Google Chrome</li>
+                    <li>Mozilla Firefox</li>
+                    <li>Opera</li>
+                    <li>Apple Safari</li>
+                </ul> 
+
+                <p>The library has a suite of unit tests covering the core functionality, after every commit these are run in all browsers we support using a combination of TravisCI and BrowserStack. Aside from the unit tests, the library is also tested manually prior to each release.</p>
+
+                <p>If you need to support Internet Explorer 8 or below their are two options available:</p>
+
+                <ul>
+                    <li>Use a matchMedia polyfill and a bind polfill</li>
+                    <li>Use SimpleStateManager 2.X.X branch</li>
+                </ul>
+
             </div>
         </section>
 

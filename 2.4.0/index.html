@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SimpleStateManager {{package.version}} - Responsive state manager for JavaScript</title>
+        <title>SimpleStateManager - Responsive state manager for JS</title>
         <link rel="stylesheet" href="css/styles.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -21,7 +21,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="index.html">SimpleStateManager {{package.version}}</a>
+                    <a class="brand" href="index.html">Simple State Manager</a>
 
                     <div class="nav-collapse collapse">
                         <ul class="nav">
@@ -49,26 +49,20 @@
             </div>
         </div>
 
-        <div class="old-version">
-            <div class="container">
-                <p class="text-align-center"><a href="/2.4.0">Are you looking for the SimpleStateManager 2.4.0 documentation? Visit the SimpleStageManager 2.4.0 Site. &raquo;</a></p>
-            </div>
-        </div>
-
         <header id="hero">
             <div class="container">
                 <img src="images/ssm-logo.png" class="logo">
 
-                <h1>SimpleStateManager {{package.version}}</h1>
+                <h1>Simple State Manager 2.4.0</h1>
 
-                <p class="lead">SimpleStateManager (SSM for short) is a javascript state manager for responsive websites. It is built to be light weight, has no dependencies, supports AMD (if thats your kinda thing) and aims to be really easy to simply drop into your project ready to use.</p>
+                <p class="lead">Simple State Manager (SSM for short) is a javascript state manager for responsive websites. It is built to be light weight, has no dependencies, supports AMD (if thats your kinda thing) and aims to be really easy to simply drop into your project ready to use.</p>
                 <a class="btn btn-large btn-secondary" href="https://github.com/jonathan-fielding/SimpleStateManager/archive/master.zip">Download <span class="hidden-mobile">SimpleStateManager</span></a>
             </div>
         </header>
 
         <section id="intro">
             <div class="container">
-                <p>SimpleStateManager is built around the concept of states, a state being the conditions of the browser at any given point, a condition might be whether a media query matches and/or the features the browser supports. With SimpleStateManager you can define a state and a series of conditions that must be met for it to be active. Each of these states can then have an onEnter, onLeave and onResize event.</p>
+                <p>SimpleStateManager is built around the concept of states, a state being the conditions of the browser at any given point, example conditions being the dimensions of the viewport and the features it supports. With SimpleStateManager you can define a state and a series of conditions that must be met for it to be active. Each of these states can then have an onEnter, onLeave and onResize event.</p>
 
                 <h2>Why should I use SSM</h2>
 
@@ -83,11 +77,10 @@
         <section id="getstarted">
             <div class="container">
                 <h2>Getting started</h2>
-                <p>To get started with SimpleStageManager the first step is to include it in your project, you can do this in three ways</p>
+                <p>To get started with SimpleStageManager the first step is to include it in your project, you can do this in two ways</p>
                 <ul>
                     <li>Download and add the ssm.js (or the minified ssm.min.js) file to your site</li>
                     <li>Use Bower to add to your project using <code>bower install SimpleStateManager</code></li>
-                    <li>Use NPM to add to your project using <code>npm install SimpleStateManager --save</code></li>
                 </ul>
 
                 <p>Having downloaded SimpleStateManager you will next need to include the JavaScript file in your page. It is recommended that this is at the end of the body before your main JavaScript file.</p>
@@ -100,14 +93,15 @@
 
                 <pre><code>ssm.addState({
     id: 'mobile',
-    query: '(min-width: 767px)',
+    maxWidth: 767,
     onEnter: function(){
         console.log('enter mobile');
     }
 });</code></pre>
 
-                <p>As soon as you have added the state, SimpleStageManager will check whether the conditions you specified have been matched, that being the case it will run the onEnter and onFirstRun methods if they have been specified.</p>
+                <p>Once we have finished adding our states to SimpleStateManager we can run the tests using the <code>ssm.ready()</code> method.</code></p>
 
+                <pre><code>ssm.ready();</code></pre>
             </div>
         </section>
 
@@ -122,26 +116,7 @@
                 <p>The MatchMedia API is incredibly powerful as it allows us to use media queries in our JavaScript, when the media query is matched or unmatched a callback method is run. SimpleStateManager states offers similar functionality by attaching itself to the browsers <code>onresize</code> method and allowing you to define different browser states. The benefit of this approach is that along with the matching and unmatching callbacks of a state you can also add an on resize method to the state.</p>
 
                 <h3 class="h4">What browsers does SimpleStateManager support?</h3>
-            
-                <p>Version 3.x of SimpleStateManager and above supports the following browsers:</p>
-
-                <ul>
-                    <li>Internet Explorer 9+</li>
-                    <li>Google Chrome</li>
-                    <li>Mozilla Firefox</li>
-                    <li>Opera</li>
-                    <li>Apple Safari</li>
-                </ul> 
-
-                <p>The library has a suite of unit tests covering the core functionality, after every commit these are run in all browsers we support using a combination of TravisCI and BrowserStack. Aside from the unit tests, the library is also tested manually prior to each release.</p>
-
-                <p>If you need to support Internet Explorer 8 or below their are two options available:</p>
-
-                <ul>
-                    <li>Use a matchMedia polyfill and a bind polfill</li>
-                    <li>Use SimpleStateManager 2.X.X branch</li>
-                </ul>
-
+                <p>Currently SimpleStateManager supports Chrome, Firefox, Internet Explorer 7+, Safari, Opera. If your site only needs to support Internet Explorer 9 and above it is advised that you use <a href="/">SimpleStateManager 3.0.0</a> which offers a broader feature set.</p>
             </div>
         </section>
 
@@ -166,7 +141,7 @@
         </section>
         <footer>
             <div class="container">
-                <p>SimpleStateManager is an Open Source Project licenced under the MIT licence</p>
+                <p>Simple State Manager is an Open Source Project licenced under the MIT licence</p>
             </div>
         </footer>
 

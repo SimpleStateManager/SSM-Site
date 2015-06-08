@@ -82,6 +82,23 @@ section{
   }
 }
 
+
+.text-align-center {
+  text-align: center;
+}
+
+.old-version {
+  background: #999; 
+
+  p {
+    margin-top: 10px;
+  }
+  
+  a {
+    color: #fff;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width:979px) {
 
   body{
@@ -169,5 +186,9 @@ section{
     pre {
       margin-top: 10px;
     }
+  }
+
+  .old-version {
+    margin: 0 -20px;
   }
 }

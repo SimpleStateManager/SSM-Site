@@ -8298,7 +8298,7 @@ header {
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background-color: #663399;
+  background-color: #07669c;
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
@@ -8361,120 +8361,97 @@ section:nth-child(odd) {
   background-color: #efefef;
 }
 
-/* line 86, ../sass/styles.scss */
-.text-align-center {
-  text-align: center;
-}
-
-/* line 90, ../sass/styles.scss */
-.old-version {
-  background: #999;
-}
-/* line 93, ../sass/styles.scss */
-.old-version p {
-  margin-top: 10px;
-}
-/* line 97, ../sass/styles.scss */
-.old-version a {
-  color: #fff;
-}
-
 @media screen and (min-width: 768px) and (max-width: 979px) {
-  /* line 104, ../sass/styles.scss */
+  /* line 87, ../sass/styles.scss */
   body {
     padding-top: 0px;
   }
 
-  /* line 108, ../sass/styles.scss */
+  /* line 91, ../sass/styles.scss */
   .navbar-fixed-top {
     margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 115, ../sass/styles.scss */
+  /* line 98, ../sass/styles.scss */
   body {
     padding-top: 0px;
   }
 
-  /* line 119, ../sass/styles.scss */
+  /* line 102, ../sass/styles.scss */
   header {
     margin: 0 -20px 0px;
   }
-  /* line 122, ../sass/styles.scss */
+  /* line 105, ../sass/styles.scss */
   header h1 {
     font-size: 28px;
   }
-  /* line 126, ../sass/styles.scss */
+  /* line 109, ../sass/styles.scss */
   header img {
     height: 100px;
   }
-  /* line 130, ../sass/styles.scss */
+  /* line 113, ../sass/styles.scss */
   header .lead {
     font-size: 14px;
     line-height: 1.3em;
   }
 
-  /* line 136, ../sass/styles.scss */
+  /* line 119, ../sass/styles.scss */
   h2 {
     font-size: 22px;
   }
 
-  /* line 140, ../sass/styles.scss */
+  /* line 123, ../sass/styles.scss */
   h3, .h4 {
     font-size: 16px;
     line-height: 20px;
   }
 
-  /* line 145, ../sass/styles.scss */
+  /* line 128, ../sass/styles.scss */
   footer {
     margin: 0 -20px;
   }
 
-  /* line 149, ../sass/styles.scss */
+  /* line 132, ../sass/styles.scss */
   section {
     margin: 0 -20px;
     padding: 15px;
   }
 
-  /* line 154, ../sass/styles.scss */
+  /* line 137, ../sass/styles.scss */
   .navbar-fixed-top {
     margin-bottom: 0px;
   }
 
-  /* line 158, ../sass/styles.scss */
+  /* line 141, ../sass/styles.scss */
   .api-table {
     display: block;
     border: 0;
   }
-  /* line 162, ../sass/styles.scss */
+  /* line 145, ../sass/styles.scss */
   .api-table th {
     display: none;
   }
-  /* line 166, ../sass/styles.scss */
+  /* line 149, ../sass/styles.scss */
   .api-table td, .api-table tr {
     display: block;
     border: 0px;
     padding: 0;
   }
-  /* line 172, ../sass/styles.scss */
+  /* line 155, ../sass/styles.scss */
   .api-table td {
     padding: 0 0 10px;
   }
-  /* line 177, ../sass/styles.scss */
+  /* line 160, ../sass/styles.scss */
   .api-table tr:first-child {
     display: none;
   }
-  /* line 181, ../sass/styles.scss */
+  /* line 164, ../sass/styles.scss */
   .api-table tr td:first-child {
     font-weight: bold;
   }
-  /* line 186, ../sass/styles.scss */
+  /* line 169, ../sass/styles.scss */
   .api-table pre {
     margin-top: 10px;
-  }
-
-  /* line 191, ../sass/styles.scss */
-  .old-version {
-    margin: 0 -20px;
   }
 }
