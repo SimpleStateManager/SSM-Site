@@ -75,38 +75,7 @@
 	}
 }});</code></pre>
 
-                <!--<p>A number of developers have written small snippets</p>-->
-
-                <h2>Plugins</h2>
-
-                <p>Aside from simply using a test snippet, there are also a number of plugins available for SimpleStateManager which add new functionality to the library. To get started writing a SimpleStateManager plugin you can use the below template:</p>
-
-                <pre>;(function ( $, window, document, undefined ) {
-    var pluginName = "defaultPluginName",
-        expectedType = "number";
-
-    if (typeof window.ssm === "object") {
-        ssm.addConfigOption({
-            name: pluginName,
-            test: function(){
-                if(typeof this.state[pluginName] === expectedType && this.state[pluginName] >= this.browserWidth){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
-        });
-    }
-})( jQuery, window, document );</pre>
-
-                <p>If you decide to distribute your plugins and you add them to bower, please prefix the name of your plugin with <code>ssm-</code> so that they are easy to find.</p>
-
-                <h3>Official Plugins</h3>
-                <p>There are a growing number of official plugins for SimpleStateManager</p>
-                <ul id="plugins">
-                    <li>Loading plugins...</li>
-                </ul>
+                
             </div>
         </section>
 
