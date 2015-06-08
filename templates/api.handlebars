@@ -139,7 +139,9 @@ ssm.addState({
     }
 }});</pre>
                 <p>This is the same method that SimpleStateManager uses to add the maxWidth config option so the example above is taken direct from the SimpleStateManager source. As you will notice we can use <code>this</code> to access the state we are testing to determine whether the test should pass or fail.</p>
+                
                 <p>Some simple examples of tests that you could add to SimpleStateManager are:</p>
+                
                 <ul>
                     <li>Test to see if touch events are avalible</li>
                 </ul>
@@ -196,18 +198,6 @@ ssm.addState({
                     <tr>
                         <td>ssm.ready</td>
                         <td>Tells the page that states have been added and we can fire the onEnter event for the current state/states.</td>
-                    </tr>
-                    <tr>
-                        <td>ssm.getBrowserWidth</td>
-                        <td>Get the current value of the browser width</td>
-                    </tr>
-                    <tr>
-                        <td>ssm.setResizeTimeout</td>
-                        <td>Set the value of the timeout used for the resize debounce</td>
-                    </tr>
-                    <tr>
-                        <td>ssm.getResizeTimeout</td>
-                        <td>Get the current value the resize timeout</td>
                     </tr>
                     <tr>
                         <td>ssm.addConfigOption</td>
