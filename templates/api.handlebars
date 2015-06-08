@@ -59,7 +59,7 @@
         <section id="api">
             <div class="container">
 
-                <h3>Add States</h3>
+                <h2>Add States</h2>
                 <p>With SimpleStateManager you can add multiple states based on your needs, the most simple way to add a state is to simply pass the information about your state to SSM using <code>ssm.addState</code>. You are able to add as many states as you need, your states are able to overlap and your states can each have their own <code>onEnter</code>, <code>onLeave</code> and <code>onResize</code> events.</p>
 
                 <pre>ssm.addState({
@@ -113,10 +113,11 @@ ssm.addState({
     }
 }
 ]);</pre>
+                <h3 class="h4">Note:</h4>
 
-                <p>It is important to remember that the if you do not pass a media query using the <code>query</code> parameter the query will always match.</p>
+                <p>It is important to remember that the if you do not pass a media query using the <code>query</code> parameter the query will always match. This is useful for when you simply want to toggle whether a state should be active or not using custom config options you have added.</p>
 
-                <h3>Remove States</h3>
+                <h2>Remove States</h2>
 
                 <p>Sometimes it may be necessary to remove a state, if we have the <strong>id</strong> for the state we can easily remove the state, to remove the mobile state from our above example we simply use:</p>
 
@@ -126,7 +127,7 @@ ssm.addState({
 
                 <pre>ssm.removeStates(['tablet', 'mobile']);</pre>
                 
-                <h3>Add a new config option</h3>
+                <h2>Add a new config option</h2>
                 <p>In SimpleStateManager options we pass to our states are called config options, we are able to add new config options to SimpleStateManager using <code>ssm.addConfigOption</code></p>
 
                 <pre>ssm.addConfigOption({name:"maxWidth", test: function(){
@@ -140,11 +141,10 @@ ssm.addState({
                 <p>This is the same method that SimpleStateManager uses to add the maxWidth config option so the example above is taken direct from the SimpleStateManager source. As you will notice we can use <code>this</code> to access the state we are testing to determine whether the test should pass or fail.</p>
                 <p>Some simple examples of tests that you could add to SimpleStateManager are:</p>
                 <ul>
-                    <li>Viewport minimum and maximum height tests</li>
                     <li>Test to see if touch events are avalible</li>
                 </ul>
 
-                <h3>Full API</h3>
+                <h2>Full API</h2>
 
                 <table  class="api-table table table-hover table-condensed table-bordered">
                     <tr>
