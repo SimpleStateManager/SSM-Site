@@ -130,20 +130,38 @@ ssm.addState({
                 <h2>Add a new config option</h2>
                 <p>In SimpleStateManager options we pass to our states are called config options, we are able to add new config options to SimpleStateManager using <code>ssm.addConfigOption</code></p>
 
-                <pre>ssm.addConfigOption({name:"maxWidth", test: function(){
-    if(typeof this.state.maxWidth === "number" && this.state.maxWidth >= this.browserWidth){
-        return true;
+                <pre>ssm.addConfigOption({
+    name: "touch", 
+    test: function(){
+        if(typeof this.state.touch === "boolean" && this.state.touch === Modernizr.touch){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
-    else{
-        return false;
+});</pre>
+                <p>By default the <code>addConfigOption</code> method will run the test when it is matched, unmatched and during an active state's resize. If you would prefer the test were run only run once, potentially in the circumstance that the test is for a browser feature since the feature is either their or not then you can chose to use the <code>when</code> property with the value "once".</p>
+
+
+                <pre>ssm.addConfigOption({
+    name: "touch", 
+    when: "once",
+    test: function(){
+        if(typeof this.state.touch === "boolean" && this.state.touch === Modernizr.touch){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
-}});</pre>
-                <p>This is the same method that SimpleStateManager uses to add the maxWidth config option so the example above is taken direct from the SimpleStateManager source. As you will notice we can use <code>this</code> to access the state we are testing to determine whether the test should pass or fail.</p>
-                
+});</pre>
+
                 <p>Some simple examples of tests that you could add to SimpleStateManager are:</p>
                 
                 <ul>
-                    <li>Test to see if touch events are avalible</li>
+                    <li>Test to see if touch events are avaliable (see the code example above)</li>
+                    <li>Test </li>
                 </ul>
 
                 <h2>Full API</h2>
