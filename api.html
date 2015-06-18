@@ -176,10 +176,6 @@ ssm.addState({
                         <td>Add a new state, expects an object literal, properties avaliable -  id (optional), minWidth (optional), maxWidth (optional), onEnter (optional), onResize (optional), onLeave (optional)</td>
                     </tr>
                     <tr>
-                        <td>ssm.updateState</td>
-                        <td>Update an existing state, expects two parameters, firstly the id of the state you wish to update and secondly an object literal of updated settings, properties avaliable -  id (optional), minWidth (optional), maxWidth (optional), onEnter (optional), onResize (optional), onLeave (optional)</td>
-                    </tr>
-                    <tr>
                         <td>ssm.addStates</td>
                         <td>Add multiple new states, expects an array of object literals, properties avaliable -  id (optional), minWidth (optional), maxWidth (optional), onEnter (optional), onResize (optional), onLeave (optional)</td>
                     </tr>
@@ -196,6 +192,13 @@ ssm.addState({
                         <td>Clears all states from SSM</td>
                     </tr>
                     <tr>
+                        <td>ssm.getState</td>
+                        <td>
+                            <code>ssm.getState()</code> takes a single parameter
+                            <pre><code>ssm.getState('mobile');</code></pre>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>ssm.getStates</td>
                         <td>
                             By default <code>ssm.getStates()</code> will return all the states added to SSM however you optionally can pass an array of ID's of the states you want e.g
@@ -206,16 +209,8 @@ ssm.addState({
                         </td>
                     </tr>
                     <tr>
-                        <td>ssm.getCurrentStates</td>
-                        <td>Get the currently applied states</td>
-                    </tr>
-                    <tr>
                         <td>ssm.isActive</td>
                         <td>Check if a state is active using the ID you assigned.</td>
-                    </tr>
-                    <tr>
-                        <td>ssm.ready</td>
-                        <td>Tells the page that states have been added and we can fire the onEnter event for the current state/states.</td>
                     </tr>
                     <tr>
                         <td>ssm.addConfigOption</td>
