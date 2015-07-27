@@ -105,7 +105,7 @@ module.exports = function (grunt) {
 
     // Default task(s)
     grunt.registerTask('default', ['compile-handlebars']);
-    grunt.registerTask('bugfix', ['copy', 'bumpup', 'compile-handlebars', 'uglify', 'copy']);
-    grunt.registerTask('minor', ['copy', 'bumpup:minor', 'compile-handlebars', 'uglify', 'copy']);
-    grunt.registerTask('major', ['copy', 'bumpup:major', 'compile-handlebars', 'uglify', 'copy']);
+    grunt.registerTask('bugfix', ['bumpup', 'compile-handlebars']);
+    grunt.registerTask('minor', ['bumpup:minor', 'compile-handlebars']);
+    grunt.registerTask('major', ['bumpup:major', 'compile-handlebars']);
 };
