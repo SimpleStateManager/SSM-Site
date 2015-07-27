@@ -98,8 +98,7 @@ ssm.addState({
 },
 {
     id: 'tablet',
-    query: '(min-width: 768px)',
-    query: '(max-width: 1023px)',
+    query: '(min-width: 768px) and (max-width: 1023px)',
     onEnter: function(){
         console.log('enter tablet');
     }
