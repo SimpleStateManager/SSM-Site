@@ -1,4 +1,4 @@
-# SimpleStateManager 3.0.0
+# SimpleStateManager 3.1.0
 
 [![Build Status](https://travis-ci.org/SimpleStateManager/SimpleStateManager.png?branch=master)](https://travis-ci.org/SimpleStateManager/SimpleStateManager) [![Code Climate](https://codeclimate.com/github/SimpleStateManager/SimpleStateManager.png)](https://codeclimate.com/github/SimpleStateManager/SimpleStateManager)
 
@@ -17,6 +17,9 @@ To get started with SSM the first step is to include it in your project, you can
 Documentation can be found at http://www.simplestatemanager.com
 
 ##Release Log
+
+###3.1.0 - February 10th, 2015
+* Added isActive method back into library
 
 ###3.0.0 - June 8th, 2015
 * Rewrite to use the matchMedia API
