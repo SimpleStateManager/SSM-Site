@@ -55,9 +55,13 @@
 
         <section id="api">
             <div class="container">
-                <p>The SimpleStateManager API enables developers to very quickly implement JavaScript that can be enabled and disabled based upon the state of the browser. A state being the conditions of the browser at any given point, a condition might be whether a media query matches and/or the features the browser supports.</p>
+                <p>The SimpleStateManager API enables developers to very quickly implement JavaScript that can be enabled and disabled based upon the state of the browser.</p>
 
-                <h2>Add States</h2>
+                <h2>States</h2>
+
+                <p>A state is the set of conditions of the browser at any given point, a condition might be whether a media query matches and/or the features the browser supports. Out of the box SimpleStateManager enables you to use media queries as conditions for states, you can also add your own conditions by adding <a href="#custom-option">custom state config options</a>.</p>
+
+                <h3>Adding states</h3>
                 <p>With SimpleStateManager you can add multiple states based on your needs, the most simple way to add a state is to simply pass the information about your state to SSM using <code>ssm.addState</code>. You are able to add as many states as you need, your states are able to overlap and your states can each have their own <code>onEnter</code>, <code>onLeave</code>, <code>onFirstRun</code>  and <code>onResize</code> events.</p>
 
                 <p>When calling the <code>.addState</code> method you are able to pass a variety of options to the method, these are:</p>
@@ -124,11 +128,11 @@ ssm.addState({
     }
 }
 ]);</pre>
-                <h3 class="h4">Note:</h4>
+                <h4 class="h4">Note:</h4>
 
                 <p>It is important to remember that the if you do not pass a media query using the <code>query</code> parameter the query will always match. This is useful for when you simply want to toggle whether a state should be active or not using custom config options you have added.</p>
 
-                <h2>Remove States</h2>
+                <h3>Remove States</h3>
 
                 <p>Sometimes it may be necessary to remove a state, if we have the <strong>id</strong> for the state we can easily remove the state, to remove the mobile state from our above example we simply use:</p>
 
@@ -138,7 +142,11 @@ ssm.addState({
 
                 <pre>ssm.removeStates(['tablet', 'mobile']);</pre>
                 
-                <h2>Add a new config option</h2>
+                <h2 id="custom-option">Custom state configuration options</h2>
+
+                <p>Custom state configuration options enable you to add custom tests for conditions. This means you can enable your states to only be active for many different situations such as when the users browser supports a particular feature.</p>
+
+                <h3>Add a custom config option</h3>
                 <p>In SimpleStateManager options we pass to our states are called config options, we are able to add new config options to SimpleStateManager using <code>ssm.addConfigOption</code></p>
 
                 <pre>ssm.addConfigOption({
@@ -167,13 +175,7 @@ ssm.addState({
         }
     }
 });</pre>
-
-                <p>Some simple examples of tests that you could add to SimpleStateManager are:</p>
-                
-                <ul>
-                    <li>Test to see if touch events are avaliable (see the code example above)</li>
-                    <li>Check whether a the browser supports a particular feature.</li>
-                </ul>    
+    
                 <h2>Full API</h2>
 
                 <table  class="api-table table table-hover table-condensed table-bordered">
