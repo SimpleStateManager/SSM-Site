@@ -160,7 +160,17 @@ ssm.addState({
         }
     }
 });</pre>
-                <p>By default the <code>addConfigOption</code> method will run the test when it is matched, unmatched and during an active state's resize. If you would prefer the test were run only run once, potentially in the circumstance that the test is for a browser feature since the feature is either their or not then you can chose to use the <code>when</code> property with the value "once".</p>
+                <p>By default the <code>addConfigOption</code> method will run when the browser is resized. If you want to customise this behaviour you can do so by using the <code>when</code> property of your config option.</p>
+
+                <p>The <code>when</code> property has the following supported values:</p>
+
+                <ul>
+                    <li>resize (default): Run the test whenever the browser is resized</li>
+                    <li>match: Run the test whenever the query attached to the state becomes matched/unmatched</li>
+                    <li>once: Run the test once on the state it has been applied to, if the value is not what is expected then the state is not added.</li>
+                </ul>
+
+                <p>An example of where you might set the value of <code>when</code> to <code>once</code> would be a feature test such as determining if the users device supports touch events. An example of how this might work is below:</p>
 
 
                 <pre>ssm.addConfigOption({
