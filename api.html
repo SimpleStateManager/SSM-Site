@@ -32,9 +32,6 @@
                                 <a href="api.html">API</a>
                             </li>
                             <li class="">
-                                <a href="extend.html">Extend</a>
-                            </li>
-                            <li class="">
                                 <a href="debug.html">Debug Tool</a>
                             </li>
                             <li class="">
@@ -58,9 +55,25 @@
 
         <section id="api">
             <div class="container">
+                <p>The SimpleStateManager API enables developers to very quickly implement JavaScript that can be enabled and disabled based upon the state of the browser. A state being the conditions of the browser at any given point, a condition might be whether a media query matches and/or the features the browser supports.</p>
 
                 <h2>Add States</h2>
-                <p>With SimpleStateManager you can add multiple states based on your needs, the most simple way to add a state is to simply pass the information about your state to SSM using <code>ssm.addState</code>. You are able to add as many states as you need, your states are able to overlap and your states can each have their own <code>onEnter</code>, <code>onLeave</code> and <code>onResize</code> events.</p>
+                <p>With SimpleStateManager you can add multiple states based on your needs, the most simple way to add a state is to simply pass the information about your state to SSM using <code>ssm.addState</code>. You are able to add as many states as you need, your states are able to overlap and your states can each have their own <code>onEnter</code>, <code>onLeave</code>, <code>onFirstRun</code>  and <code>onResize</code> events.</p>
+
+                <p>When calling the <code>.addState</code> method you are able to pass a variety of options to the method, these are:</p>
+
+                <ul>
+                    <li>id (optional) – An ID for the method, this is only needed if you want to reference the state somewhere else in your code, otherwise a ID will be automatically assigned to your state.</li>
+                    <li>query (required) – The media query that you want to match when this state is to be active</li>
+                    <li>onEnter (optional) – A method to fire when you enter the state</li>
+                    <li>onResize (optional) – A method to fire when you resize the state</li>
+                    <li>onLeave (optional) – A method to fire when you leave the state (perhaps to clean up after the state)</li>
+                    <li>onFirstRun (optional) – A method that runs when the state is first activated</li>
+                </ul>
+
+                <h3>Example of adding states</h3>
+
+                <p>In the below example we are adding three states, one for mobile devices, one for tablet and one for desktop. We have defined these using a media query that checks the width of the browser.</p>
 
                 <pre>ssm.addState({
     id: 'mobile',
@@ -86,7 +99,7 @@ ssm.addState({
     }
 });</pre>
 
-                <p>If you wish to use one command to add multiple states using one command you can use ssm.addStates to which you should pass an array of states.</p>
+                <p>Alternatively you can add these states in a single command by passing them as an array of states to the <code>ssm.addStates</code> method. This same example is shown again below but using the addStates method instead.</p>
 
 <pre>ssm.addStates([
 {
@@ -159,9 +172,8 @@ ssm.addState({
                 
                 <ul>
                     <li>Test to see if touch events are avaliable (see the code example above)</li>
-                    <li>Test </li>
-                </ul>
-
+                    <li>Check whether a the browser supports a particular feature.</li>
+                </ul>    
                 <h2>Full API</h2>
 
                 <table  class="api-table table table-hover table-condensed table-bordered">
@@ -221,6 +233,7 @@ ssm.addState({
 });</code></pre></td>
                     </tr>
                 </table>
+
             </div>
         </section>
         <footer>
