@@ -5,7 +5,7 @@
 
     ssm.addState({
         id: 'mobile',
-        maxWidth: 767,
+        query: '(max-width: 767px)',
         onEnter: function(){
             document.getElementById('hero').style.backgroundColor = "#3f0071";
         }
@@ -13,8 +13,7 @@
 
     ssm.addState({
         id: 'tablet',
-        minWidth: 768,
-        maxWidth: 991,
+        query: '(min-width: 768px) and (max-width: 991px)',
         onEnter: function() {
             document.getElementById('hero').style.backgroundColor = "#652995";
         }
@@ -22,13 +21,11 @@
 
     ssm.addState({
         id: 'desktop',
-        minWidth: 992,
+        query: '(min-width: 992px)',
         onEnter: function(){
             document.getElementById('hero').style.backgroundColor = "#663399";
         }
     });
-
-    ssm.ready();
 
     //Enable debug mode
     //document.body.appendChild(document.createElement('script')).src='http://www.simplestatemanager.com/bookmarklet/debugger.js';
