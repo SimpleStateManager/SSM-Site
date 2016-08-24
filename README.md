@@ -1,4 +1,4 @@
-# SimpleStateManager 3.1.3
+# SimpleStateManager 3.2.0
 
 [![Build Status](https://travis-ci.org/SimpleStateManager/SimpleStateManager.png?branch=master)](https://travis-ci.org/SimpleStateManager/SimpleStateManager) [![Code Climate](https://codeclimate.com/github/SimpleStateManager/SimpleStateManager.png)](https://codeclimate.com/github/SimpleStateManager/SimpleStateManager)
 
@@ -17,6 +17,9 @@ To get started with SSM the first step is to include it in your project, you can
 Documentation can be found at http://www.simplestatemanager.com
 
 ##Release Log
+
+###3.2.0 - August 24th, 2016
+* Add method to enable developers to attach multiple callbacks to a state
 
 ###3.1.2 - June 17th, 2016
 * Fixed a bug where IE11 would reject a media expression that is an empty string, switched to provide a media expersion that is always true as the default.
